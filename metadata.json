@@ -1,0 +1,6 @@
+{
+  "name": "AURA Moda Consciente",
+  "description": "Landing page moderna y accesible para tienda de ropa con tejidos transpirables y diseño atemporal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
