@@ -1,14 +1,14 @@
-# AURA Moda Consciente 🌿
+# AURA Moda Consciente 
 
 ![AURA Moda Consciente Banner](https://endearing-crisp-f1b1ae.netlify.app/assets/hero_clothing_lookbook_1790697575080-C_VNQNTh.jpg)
 
 **AURA Moda Consciente** es una landing page enfocada en una marca de ropa que busca el equilibrio perfecto entre estilo, bienestar y durabilidad. El proyecto destaca por ofrecer moda cómoda, prendas atemporales y tejidos transpirables que cuidan la piel, utilizando fibras naturales como algodón orgánico GOTS, lino europeo y Tencel Lyocell.
 
-🌍 **Live Demo:** [Visitar AURA Moda Consciente](https://endearing-crisp-f1b1ae.netlify.app/)
+ **Live Demo:** proximamente
 
 ---
 
-## 📖 Tabla de Contenidos
+##  Tabla de Contenidos
 - [Características de la Landing Page](#-características-de-la-landing-page)
 - [Tecnologías Utilizadas](#-tecnologías-utilizadas)
 - [Estructura de la Marca](#-estructura-de-la-marca)
@@ -18,7 +18,7 @@
 
 ---
 
-## ✨ Características de la Landing Page
+## Características de la Landing Page
 
 - **Diseño Moderno y Minimalista:** Interfaz de usuario (UI) limpia y atemporal, reflejando los valores de la marca.
 - **Totalmente Responsiva:** Adaptada perfectamente a dispositivos móviles, tablets y ordenadores de escritorio.
@@ -28,7 +28,7 @@
 
 ---
 
-## 🛠 Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 Este proyecto ha sido construido utilizando tecnologías modernas para garantizar velocidad, SEO y una excelente experiencia de usuario:
 
@@ -40,7 +40,7 @@ Este proyecto ha sido construido utilizando tecnologías modernas para garantiza
 
 ---
 
-## 👕 Estructura de la Marca (Contenido)
+## Estructura de la Marca (Contenido)
 
 La página se divide estratégicamente para la conversión de clientes:
 1. **Hero Section:** Presentación del valor principal ("Ropa Cómoda y Sostenible").
@@ -49,11 +49,3 @@ La página se divide estratégicamente para la conversión de clientes:
 4. **Preguntas Frecuentes (FAQ):** Manejo de objeciones (cambios gratuitos, tiempos de envío en 24-48 hrs, guía interactiva de tallas).
 
 ---
-
-## 🚀 Instalación y Uso (Desarrollo)
-
-Si deseas clonar el proyecto y correrlo en un entorno local, sigue estos pasos:
-
-1. **Clona el repositorio:**
-   ```bash
-   git clone [https://github.com/tu-usuario/aura-moda-consciente.git](https://github.com/tu-usuario/aura-moda-consciente.git)
