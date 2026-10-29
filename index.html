@@ -77,166 +77,34 @@
       padding-right: 1.25rem;
     }
 
-    /* =========================================
-       SNIPPET 4: NAVBAR STICKY
-       ========================================= */
-    .amc-navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: var(--spacing-base) calc(var(--spacing-base) * 2);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: transparent;
-      transition: background var(--transition-speed), box-shadow var(--transition-speed);
-      z-index: 1000;
-    }
-    .amc-navbar--scrolled {
-      background: var(--color-bg);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .amc-navbar-logo {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      color: var(--color-primary);
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .amc-navbar-links {
-      list-style: none;
-      display: flex;
-      gap: var(--spacing-base);
-      margin: 0;
-      padding: 0;
-    }
-    .amc-navbar-links a {
-      text-decoration: none;
-      color: var(--color-text);
-      font-family: var(--font-body);
-      font-weight: 500;
-    }
+    /* Navbar y Hero (Tus estilos originales sin alterar) */
+    .amc-navbar { position: fixed; top: 0; left: 0; width: 100%; padding: var(--spacing-base) calc(var(--spacing-base) * 2); display: flex; justify-content: space-between; align-items: center; background: transparent; transition: background var(--transition-speed), box-shadow var(--transition-speed); z-index: 1000; }
+    .amc-navbar--scrolled { background: var(--color-bg); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .amc-navbar-logo { font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary); font-weight: bold; text-decoration: none; }
+    .amc-navbar-links { list-style: none; display: flex; gap: var(--spacing-base); margin: 0; padding: 0; }
+    .amc-navbar-links a { text-decoration: none; color: var(--color-text); font-family: var(--font-body); font-weight: 500; }
 
-    /* =========================================
-       SNIPPET 1: HERO SECTION
-       ========================================= */
-    .amc-hero {
-      position: relative;
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: url('/src/assets/images/hero_clothing_lookbook_1790697575080.jpg') center/cover no-repeat;
-      padding: var(--spacing-base);
-    }
-    .amc-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(44, 51, 51, 0.6);
-    }
-    .amc-hero-content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      color: var(--color-bg);
-      max-width: 800px;
-    }
-    .amc-hero-title {
-      font-family: var(--font-heading);
-      font-size: 3rem;
-      margin-bottom: calc(var(--spacing-base) * 0.5);
-      color: var(--color-bg);
-    }
-    .amc-hero-subtitle {
-      font-family: var(--font-body);
-      font-size: 1.1rem;
-      margin-bottom: calc(var(--spacing-base) * 1.5);
-    }
-    .amc-hero-cta {
-      background-color: var(--color-primary);
-      color: var(--color-bg);
-      border: none;
-      padding: calc(var(--spacing-base) * 0.75) calc(var(--spacing-base) * 1.5);
-      border-radius: var(--border-radius);
-      font-family: var(--font-body);
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color var(--transition-speed);
-      margin-top: 1rem;
-    }
+    .amc-hero { position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; background: url('/src/assets/images/hero_clothing_lookbook_1790697575080.jpg') center/cover no-repeat; padding: var(--spacing-base); }
+    .amc-hero::before { content: ''; position: absolute; inset: 0; background: rgba(44, 51, 51, 0.6); }
+    .amc-hero-content { position: relative; z-index: 1; text-align: center; color: var(--color-bg); max-width: 800px; }
+    .amc-hero-title { font-family: var(--font-heading); font-size: 3rem; margin-bottom: calc(var(--spacing-base) * 0.5); color: var(--color-bg); }
+    .amc-hero-subtitle { font-family: var(--font-body); font-size: 1.1rem; margin-bottom: calc(var(--spacing-base) * 1.5); }
+    .amc-hero-cta { background-color: var(--color-primary); color: var(--color-bg); border: none; padding: calc(var(--spacing-base) * 0.75) calc(var(--spacing-base) * 1.5); border-radius: var(--border-radius); font-family: var(--font-body); font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; transition: background-color var(--transition-speed); margin-top: 1rem; }
     .amc-hero-cta:hover { background-color: var(--color-accent); }
 
-    /* =========================================
-       SNIPPET 3: COUNTDOWN TIMER
-       ========================================= */
-    .amc-countdown {
-      display: flex;
-      gap: var(--spacing-base);
-      justify-content: center;
-      padding: calc(var(--spacing-base) * 2) 0;
-    }
-    .amc-countdown-box {
-      background: var(--color-accent);
-      color: var(--color-bg);
-      padding: var(--spacing-base);
-      border-radius: var(--border-radius);
-      text-align: center;
-      min-width: 80px;
-    }
-    .amc-countdown-number {
-      display: block;
-      font-family: var(--font-heading);
-      font-size: 2rem;
-    }
-    .amc-countdown-label {
-      font-family: var(--font-body);
-      font-size: 0.875rem;
-      text-transform: uppercase;
-    }
+    .amc-countdown { display: flex; gap: var(--spacing-base); justify-content: center; padding: calc(var(--spacing-base) * 2) 0; }
+    .amc-countdown-box { background: var(--color-accent); color: var(--color-bg); padding: var(--spacing-base); border-radius: var(--border-radius); text-align: center; min-width: 80px; }
+    .amc-countdown-number { display: block; font-family: var(--font-heading); font-size: 2rem; }
+    .amc-countdown-label { font-family: var(--font-body); font-size: 0.875rem; text-transform: uppercase; }
 
-    /* =========================================
-       SNIPPET 2: ACCORDION FAQ
-       ========================================= */
-    .amc-faq {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .amc-faq-item {
-      border: 1px solid var(--color-secondary);
-      border-radius: var(--border-radius);
-      margin-bottom: calc(var(--spacing-base) * 0.5);
-      overflow: hidden;
-    }
-    .amc-faq-question {
-      width: 100%;
-      text-align: left;
-      padding: var(--spacing-base);
-      background: var(--color-bg);
-      color: var(--color-text);
-      border: none;
-      font-family: var(--font-body);
-      font-weight: bold;
-      cursor: pointer;
-      transition: background var(--transition-speed);
-    }
+    .amc-faq { max-width: 800px; margin: 0 auto; }
+    .amc-faq-item { border: 1px solid var(--color-secondary); border-radius: var(--border-radius); margin-bottom: calc(var(--spacing-base) * 0.5); overflow: hidden; }
+    .amc-faq-question { width: 100%; text-align: left; padding: var(--spacing-base); background: var(--color-bg); color: var(--color-text); border: none; font-family: var(--font-body); font-weight: bold; cursor: pointer; transition: background var(--transition-speed); }
     .amc-faq-question:hover { background: var(--color-secondary); }
-    .amc-faq-answer {
-      max-height: 0;
-      transition: max-height var(--transition-speed) ease-out;
-      background: var(--color-bg);
-      padding: 0 var(--spacing-base);
-    }
-    .amc-faq-item.amc-faq-item--active .amc-faq-answer {
-      max-height: 500px;
-      padding: var(--spacing-base);
-    }
+    .amc-faq-answer { max-height: 0; transition: max-height var(--transition-speed) ease-out; background: var(--color-bg); padding: 0 var(--spacing-base); }
+    .amc-faq-item.amc-faq-item--active .amc-faq-answer { max-height: 500px; padding: var(--spacing-base); }
     .amc-faq-answer p { margin: 0; }
 
-    /* RESTO DE ESTILOS DE SECCIONES (Simplificados para convivencia) */
     .section-padding { padding: 4.5rem 0; }
     .bg-subtle { background-color: var(--bg-subtle); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
     .section-header { text-align: center; max-width: 44rem; margin: 0 auto 3rem; }
@@ -250,14 +118,29 @@
     .form-card { background-color: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 2.5rem 1.5rem; max-width: 44rem; margin: 0 auto; box-shadow: var(--shadow-md); }
     .form-group { margin-bottom: 1.25rem; }
     .form-control { width: 100%; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.9375rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); background-color: #f8fafc; color: var(--text-main); }
-    .btn-primary-form { background-color: var(--text-main); color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; width: 100%; }
+    .btn-primary-form { background-color: var(--text-main); color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; width: 100%; transition: background-color 0.3s; }
+    .btn-primary-form:disabled { background-color: var(--text-muted); cursor: not-allowed; }
     
     .site-footer { background-color: var(--bg-footer); color: #94a3b8; font-size: 0.8125rem; padding: 3.5rem 0 2rem; border-top: 1px solid #27272a; text-align: center; }
+
+    /* NUEVO CSS: Estilo para el mensaje de éxito */
+    #success-message {
+      display: none;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      background-color: var(--success-bg);
+      border: 1px solid var(--success-border);
+      border-radius: var(--radius-lg);
+      color: var(--success-text);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    #success-message h3 { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 0.5rem; color: var(--success-text); }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body>
 
-  <!-- SNIPPET 4: NAVBAR STICKY -->
+  <!-- NAVBAR STICKY -->
   <nav class="amc-navbar" id="main-nav">
     <a href="#hero" class="amc-navbar-logo">Aura.</a>
     <ul class="amc-navbar-links">
@@ -269,37 +152,24 @@
 
   <main id="main-content">
 
-    <!-- SNIPPET 1 & 3: HERO SECTION + COUNTDOWN -->
+    <!-- HERO SECTION + COUNTDOWN -->
     <section class="amc-hero" id="hero">
       <div class="amc-hero-content">
         <h1 class="amc-hero-title">Viste con Propósito</h1>
         <p class="amc-hero-subtitle">Moda sostenible que respeta tu piel y el planeta. Oferta especial de lanzamiento terminando pronto:</p>
         
-        <!-- Contador Regresivo -->
         <div class="amc-countdown" id="promo-timer">
-          <div class="amc-countdown-box">
-            <span class="amc-countdown-number" data-time="days">00</span>
-            <span class="amc-countdown-label">Días</span>
-          </div>
-          <div class="amc-countdown-box">
-            <span class="amc-countdown-number" data-time="hours">00</span>
-            <span class="amc-countdown-label">Horas</span>
-          </div>
-          <div class="amc-countdown-box">
-            <span class="amc-countdown-number" data-time="minutes">00</span>
-            <span class="amc-countdown-label">Min</span>
-          </div>
-          <div class="amc-countdown-box">
-            <span class="amc-countdown-number" data-time="seconds">00</span>
-            <span class="amc-countdown-label">Seg</span>
-          </div>
+          <div class="amc-countdown-box"><span class="amc-countdown-number" data-time="days">00</span><span class="amc-countdown-label">Días</span></div>
+          <div class="amc-countdown-box"><span class="amc-countdown-number" data-time="hours">00</span><span class="amc-countdown-label">Horas</span></div>
+          <div class="amc-countdown-box"><span class="amc-countdown-number" data-time="minutes">00</span><span class="amc-countdown-label">Min</span></div>
+          <div class="amc-countdown-box"><span class="amc-countdown-number" data-time="seconds">00</span><span class="amc-countdown-label">Seg</span></div>
         </div>
 
         <a href="#beneficios" class="amc-hero-cta">Descubrir Colección</a>
       </div>
     </section>
 
-    <!-- SECCIÓN BENEFICIOS (Original adaptada) -->
+    <!-- SECCIÓN BENEFICIOS -->
     <section id="beneficios" class="section-padding bg-subtle">
       <div class="container">
         <div class="section-header">
@@ -326,55 +196,59 @@
       </div>
     </section>
 
-    <!-- SNIPPET 2: FAQ ACCORDION -->
+    <!-- FAQ ACCORDION -->
     <section id="faq" class="section-padding">
       <div class="container">
         <div class="section-header">
           <span class="section-kicker">Respuestas Claras</span>
           <h2>Preguntas frecuentes</h2>
         </div>
-        
         <div class="amc-faq">
           <div class="amc-faq-item">
             <button class="amc-faq-question">¿Cómo saber cuál es mi talla exacta?</button>
-            <div class="amc-faq-answer">
-              <p>Cada prenda de nuestra tienda dispone de una guía detallada con medidas tomadas directamente sobre el tejido en plano. Si tienes dudas entre dos tallas, nuestras devoluciones son 100% gratuitas durante 30 días.</p>
-            </div>
+            <div class="amc-faq-answer"><p>Cada prenda dispone de una guía detallada. Devoluciones gratuitas durante 30 días.</p></div>
           </div>
           <div class="amc-faq-item">
             <button class="amc-faq-question">¿De dónde provienen los materiales?</button>
-            <div class="amc-faq-answer">
-              <p>Utilizamos algodón orgánico certificado y poliéster reciclado. No empleamos tintes sintéticos pesados ni resinas plásticas que impidan la transpiración.</p>
-            </div>
+            <div class="amc-faq-answer"><p>Algodón orgánico y poliéster reciclado. Sin tintes sintéticos pesados.</p></div>
           </div>
           <div class="amc-faq-item">
             <button class="amc-faq-question">¿Tienen envíos internacionales?</button>
-            <div class="amc-faq-answer">
-              <p>Sí, realizamos envíos a toda América y Europa en 24 a 48 horas laborables.</p>
-            </div>
+            <div class="amc-faq-answer"><p>Sí, realizamos envíos a toda América y Europa en 24 a 48 horas laborables.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN REGISTRO (Original Simplificada) -->
+    <!-- SECCIÓN REGISTRO CON PERSISTENCIA -->
     <section id="registro" class="section-padding bg-subtle">
       <div class="container">
-        <div class="form-card">
-          <div class="section-header" style="margin-bottom: 2rem;">
+        <div class="form-card" id="form-container-card">
+          
+          <!-- Encabezado del Formulario -->
+          <div class="section-header" style="margin-bottom: 2rem;" id="form-header">
             <h2>Recibe un 15% de descuento</h2>
           </div>
+
+          <!-- Formulario -->
           <form id="leadForm" novalidate>
             <div class="form-group">
-              <label for="nombre">Nombre completo</label>
+              <label for="nombre" style="display:block; margin-bottom:0.5rem; font-weight:bold; font-size:0.9rem;">Nombre completo</label>
               <input type="text" id="nombre" class="form-control" placeholder="Ej: Mateo Rodríguez" required>
             </div>
             <div class="form-group">
-              <label for="email">Correo electrónico</label>
+              <label for="email" style="display:block; margin-bottom:0.5rem; font-weight:bold; font-size:0.9rem;">Correo electrónico</label>
               <input type="email" id="email" class="form-control" placeholder="tu.correo@ejemplo.com" required>
             </div>
             <button type="submit" class="btn-primary-form">Obtener mi 15% de descuento</button>
           </form>
+
+          <!-- Mensaje de Éxito (Oculto inicialmente) -->
+          <div id="success-message">
+            <h3 id="personalized-greeting">¡Gracias por registrarte!</h3>
+            <p>Ya hemos asegurado tu descuento del 15% para tu primera compra en Aura.</p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -387,29 +261,18 @@
     </div>
   </footer>
 
-  <!-- =========================================
-       JAVASCRIPT INTEGRADO (Snippets)
-       ========================================= -->
   <script>
-    // SNIPPET 4 JS: NAVBAR STICKY
+    // JS ORIGINAL: NAVBAR Y FAQ Y COUNTDOWN
     (() => {
       const navbar = document.getElementById('main-nav');
       let isScrolled = false;
-      
-      const handleScroll = () => {
+      window.addEventListener('scroll', () => {
         const currentScroll = window.scrollY;
-        if (currentScroll > 50 && !isScrolled) {
-          navbar.classList.add('amc-navbar--scrolled');
-          isScrolled = true;
-        } else if (currentScroll <= 50 && isScrolled) {
-          navbar.classList.remove('amc-navbar--scrolled');
-          isScrolled = false;
-        }
-      };
-      window.addEventListener('scroll', handleScroll, { passive: true });
+        if (currentScroll > 50 && !isScrolled) { navbar.classList.add('amc-navbar--scrolled'); isScrolled = true; } 
+        else if (currentScroll <= 50 && isScrolled) { navbar.classList.remove('amc-navbar--scrolled'); isScrolled = false; }
+      }, { passive: true });
     })();
 
-    // SNIPPET 2 JS: ACCORDION FAQ
     (() => {
       const faqItems = document.querySelectorAll('.amc-faq-item');
       faqItems.forEach(item => {
@@ -422,44 +285,141 @@
       });
     })();
 
-    // SNIPPET 3 JS: COUNTDOWN TIMER
     class PromoCountdown {
       constructor(targetDate, elementId) {
         this.targetDate = new Date(targetDate).getTime();
         this.container = document.getElementById(elementId);
         if(!this.container) return;
-        this.els = {
-          d: this.container.querySelector('[data-time="days"]'),
-          h: this.container.querySelector('[data-time="hours"]'),
-          m: this.container.querySelector('[data-time="minutes"]'),
-          s: this.container.querySelector('[data-time="seconds"]')
-        };
+        this.els = { d: this.container.querySelector('[data-time="days"]'), h: this.container.querySelector('[data-time="hours"]'), m: this.container.querySelector('[data-time="minutes"]'), s: this.container.querySelector('[data-time="seconds"]') };
         this.init();
       }
-      
-      init() {
-        this.updateTimer();
-        this.interval = setInterval(() => this.updateTimer(), 1000);
-      }
-      
+      init() { this.updateTimer(); this.interval = setInterval(() => this.updateTimer(), 1000); }
       updateTimer() {
-        const now = new Date().getTime();
-        const distance = this.targetDate - now;
-        
-        if (distance <= 0) {
-          clearInterval(this.interval);
-          Object.values(this.els).forEach(el => el.textContent = "00");
-          return;
-        }
-        
+        const distance = this.targetDate - new Date().getTime();
+        if (distance <= 0) { clearInterval(this.interval); Object.values(this.els).forEach(el => el.textContent = "00"); return; }
         this.els.d.textContent = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
         this.els.h.textContent = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
         this.els.m.textContent = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
         this.els.s.textContent = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
       }
     }
-    // Set target date for countdown (e.g. End of year)
     new PromoCountdown('2026-12-31T23:59:59', 'promo-timer');
+
+
+    // ==========================================
+    // NUEVO JS: MÓDULO DE PERSISTENCIA AURA (E3.2)
+    // ==========================================
+    (() => {
+      // Configuraciones
+      const NAMESPACE = 'amc_aura_';
+      const DRAFT_KEY = NAMESPACE + 'draft';
+      const CONVERTED_KEY = NAMESPACE + 'converted';
+      // ¡IMPORTANTE! Reemplaza esta URL con tu link de Formspree
+      const FORMSPREE_ENDPOINT = 'https://formspree.io/f/TU_CODIGO_AQUI'; 
+
+      // Referencias DOM
+      const form = document.getElementById('leadForm');
+      const formHeader = document.getElementById('form-header');
+      const successMessage = document.getElementById('success-message');
+      const greeting = document.getElementById('personalized-greeting');
+      const inputNombre = document.getElementById('nombre');
+      const inputEmail = document.getElementById('email');
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      // BLOQUE 1: Carga inicial de la página
+      document.addEventListener('DOMContentLoaded', () => {
+        const isConverted = localStorage.getItem(CONVERTED_KEY);
+        
+        if (isConverted) {
+          // Lógica Usuario Convertido: Ocultar form, mostrar mensaje
+          const userData = JSON.parse(isConverted);
+          showConvertedState(userData.name);
+        } else {
+          // Usuario Nuevo: Cargar datos autoguardados si existen
+          restoreDraft();
+        }
+      });
+
+      // BLOQUE 2: Autoguardado en tiempo real (Evento Input)
+      form.addEventListener('input', () => {
+        const formData = {
+          name: inputNombre.value,
+          email: inputEmail.value
+        };
+        localStorage.setItem(DRAFT_KEY, JSON.stringify(formData));
+      });
+
+      // BLOQUE 3: Función para restaurar campos desde localStorage
+      function restoreDraft() {
+        const savedDraft = localStorage.getItem(DRAFT_KEY);
+        if (savedDraft) {
+          try {
+            const formData = JSON.parse(savedDraft);
+            if (formData.name) inputNombre.value = formData.name;
+            if (formData.email) inputEmail.value = formData.email;
+          } catch (e) {
+            console.error('Error al parsear el borrador', e);
+          }
+        }
+      }
+
+      // BLOQUE 4: Envío real al servicio (Formspree)
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Validación básica HTML5 manual
+        if (!inputNombre.value || !inputEmail.value) {
+          alert('Por favor completa todos los campos.');
+          return;
+        }
+
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+
+        const formData = {
+          name: inputNombre.value,
+          email: inputEmail.value
+        };
+
+        try {
+          const response = await fetch(FORMSPREE_ENDPOINT, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          });
+
+          if (response.ok) {
+            // Guardar estado convertido
+            localStorage.setItem(CONVERTED_KEY, JSON.stringify({ name: formData.name, date: new Date().toISOString() }));
+            // Limpiar localStorage tras envío exitoso
+            localStorage.removeItem(DRAFT_KEY);
+            // Mostrar la UI de éxito
+            showConvertedState(formData.name);
+          } else {
+            alert('Hubo un problema al solicitar tu descuento. Intenta de nuevo.');
+          }
+        } catch (error) {
+          console.error('Error de red:', error);
+          alert('Error de conexión. Revisa tu internet.');
+        } finally {
+          submitBtn.textContent = 'Obtener mi 15% de descuento';
+          submitBtn.disabled = false;
+        }
+      });
+
+      // BLOQUE 5: Ajuste de Interfaz para usuario convertido
+      function showConvertedState(fullName) {
+        form.style.display = 'none';
+        formHeader.style.display = 'none';
+        successMessage.style.display = 'block';
+        // Saludar con el primer nombre si es posible
+        const firstName = fullName ? fullName.split(' ')[0] : 'amigo';
+        greeting.textContent = `¡Hola, ${firstName}!`;
+      }
+    })();
   </script>
 </body>
 </html>
