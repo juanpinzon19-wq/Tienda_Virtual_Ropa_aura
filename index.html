@@ -87,7 +87,7 @@
     .benefit-card { background-color: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 2rem; box-shadow: var(--shadow-sm); text-align: center; }
     .benefit-icon { font-size: 2.5rem; margin-bottom: 1rem; }
 
-    /* NUEVA SECCIÓN: Colección */
+    /* Colección */
     .collection-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
     .product-card { background: var(--bg-surface); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s; }
     .product-card:hover { transform: translateY(-5px); }
@@ -96,7 +96,7 @@
     .product-title { font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem; }
     .product-price { font-weight: bold; color: var(--color-primary); }
 
-    /* NUEVA SECCIÓN: Testimonios */
+    /* Testimonios */
     .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
     .testimonial-card { background: var(--bg-surface); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-left: 4px solid var(--color-accent); }
     .testimonial-text { font-style: italic; margin-bottom: 1rem; color: var(--text-muted); }
@@ -110,13 +110,12 @@
     .amc-faq-answer { max-height: 0; transition: max-height 0.3s ease-out; background: var(--color-bg); padding: 0 1rem; overflow: hidden; }
     .amc-faq-item.amc-faq-item--active .amc-faq-answer { max-height: 500px; padding: 1rem; }
 
-    /* Formulario y Validación de Error */
+    /* Formulario y Validación */
     .form-card { background-color: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 3rem 2rem; max-width: 500px; margin: 0 auto; box-shadow: var(--shadow-md); }
     .form-group { margin-bottom: 1.5rem; position: relative; }
     .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; font-size: 0.95rem; }
     .form-control { width: 100%; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 1rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); background-color: #f8fafc; transition: all 0.3s; }
     
-    /* Clases aplicadas por JS cuando hay error */
     .form-control.input-error { border-color: var(--error-border); background-color: var(--error-bg); }
     .error-msg { color: var(--error-text); font-size: 0.85rem; margin-top: 0.4rem; display: none; font-weight: 500; }
     .form-control.input-error + .error-msg { display: block; animation: shake 0.4s; }
@@ -132,7 +131,7 @@
     .btn-primary-form:hover { background-color: var(--color-text); }
     .btn-primary-form:disabled { background-color: var(--text-muted); cursor: not-allowed; }
     
-    #success-message { display: none; text-align: center; padding: 2.5rem 1.5rem; background-color: var(--success-bg); border: 1px solid var(--success-border); border-radius: var(--radius-lg); color: var(--success-text); animation: fadeIn 0.5s; }
+    #success-message { display: none; text-align: center; padding: 2.5rem 1.5rem; background-color: var(--success-bg); border: 1px solid var(--success-border); border-radius: var(--radius-md); color: var(--success-text); animation: fadeIn 0.5s; }
     #success-message h3 { font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -196,7 +195,7 @@
       </div>
     </section>
 
-    <!-- NUEVA SECCIÓN: COLECCIÓN -->
+    <!-- COLECCIÓN -->
     <section id="coleccion" class="section-padding">
       <div class="container">
         <div class="section-header">
@@ -229,7 +228,7 @@
       </div>
     </section>
 
-    <!-- NUEVA SECCIÓN: TESTIMONIOS -->
+    <!-- TESTIMONIOS -->
     <section id="testimonios" class="section-padding bg-subtle">
       <div class="container">
         <div class="section-header">
@@ -273,7 +272,7 @@
       </div>
     </section>
 
-    <!-- REGISTRO CON VALIDACIÓN ROJA Y PERSISTENCIA -->
+    <!-- REGISTRO CON GENERACIÓN DE CUPÓN -->
     <section id="registro" class="section-padding bg-subtle">
       <div class="container">
         <div class="form-card" id="form-container-card">
@@ -331,7 +330,7 @@
       });
     })();
 
-    // MÓDULO DE PERSISTENCIA Y VALIDACIÓN
+    // MÓDULO DE PERSISTENCIA, VALIDACIÓN Y CUPÓN
     (() => {
       const DRAFT_KEY = 'amc_aura_draft';
       const CONVERTED_KEY = 'amc_aura_converted';
@@ -345,11 +344,22 @@
       const inputEmail = document.getElementById('email');
       const submitBtn = form.querySelector('button[type="submit"]');
 
+      // Función para generar un cupón aleatorio (Ej: AURA-X7B9K)
+      const generarCupon = () => {
+        const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let cupon = 'AURA-';
+        for (let i = 0; i < 5; i++) {
+          cupon += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+        }
+        return cupon;
+      };
+
       // 1. Carga inicial
       document.addEventListener('DOMContentLoaded', () => {
         const isConverted = localStorage.getItem(CONVERTED_KEY);
         if (isConverted) {
-          showConvertedState(JSON.parse(isConverted).name);
+          const data = JSON.parse(isConverted);
+          showConvertedState(data.name, data.cupon);
         } else {
           const savedDraft = localStorage.getItem(DRAFT_KEY);
           if (savedDraft) {
@@ -362,41 +372,41 @@
 
       // 2. Autoguardado y Limpieza de Errores al escribir
       const handleInput = (inputElement) => {
-        // Quitar la clase roja de error si el usuario empieza a escribir
         inputElement.classList.remove('input-error');
-        // Autoguardado
         localStorage.setItem(DRAFT_KEY, JSON.stringify({ name: inputNombre.value, email: inputEmail.value }));
       };
 
       inputNombre.addEventListener('input', () => handleInput(inputNombre));
       inputEmail.addEventListener('input', () => handleInput(inputEmail));
 
-      // 3. Envío y Validación Visual (Rojo)
+      // 3. Envío y Validación Visual
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         let hasError = false;
 
-        // Validar Nombre vacío
         if (!inputNombre.value.trim()) {
           inputNombre.classList.add('input-error');
           hasError = true;
         }
         
-        // Validar Email vacío o sin formato básico
         if (!inputEmail.value.trim() || !inputEmail.value.includes('@')) {
           inputEmail.classList.add('input-error');
           hasError = true;
         }
 
-        // Si hay un error, detener el envío
         if (hasError) return;
 
-        // Si todo está bien, iniciar envío
-        submitBtn.textContent = 'Enviando...';
+        submitBtn.textContent = 'Generando cupón...';
         submitBtn.disabled = true;
 
-        const formData = { name: inputNombre.value.trim(), email: inputEmail.value.trim() };
+        // Generar el cupón y añadirlo a los datos enviados
+        const cuponAleatorio = generarCupon();
+        const formData = { 
+            name: inputNombre.value.trim(), 
+            email: inputEmail.value.trim(),
+            cupon_descuento: cuponAleatorio // Este campo llegará a tu correo/backend
+        };
 
         try {
           const response = await fetch(FORMSPREE_ENDPOINT, {
@@ -406,9 +416,9 @@
           });
 
           if (response.ok) {
-            localStorage.setItem(CONVERTED_KEY, JSON.stringify({ name: formData.name }));
+            localStorage.setItem(CONVERTED_KEY, JSON.stringify({ name: formData.name, cupon: formData.cupon_descuento }));
             localStorage.removeItem(DRAFT_KEY);
-            showConvertedState(formData.name);
+            showConvertedState(formData.name, formData.cupon_descuento);
           } else {
             alert('Error en el servidor. Intenta nuevamente.');
           }
@@ -420,12 +430,19 @@
         }
       });
 
-      function showConvertedState(fullName) {
+      function showConvertedState(fullName, cupon) {
         form.style.display = 'none';
         formHeader.style.display = 'none';
         successMessage.style.display = 'block';
+        
         const firstName = fullName ? fullName.split(' ')[0] : 'amigo';
         greeting.textContent = `¡Hola, ${firstName}!`;
+        
+        // Mostrar el cupón en pantalla además de enviarlo al correo
+        if (cupon) {
+          const textoExito = successMessage.querySelector('p');
+          textoExito.innerHTML = `Ya hemos asegurado tu descuento del 15%. Revisa tu bandeja de entrada o usa tu código directamente: <br><strong style="display:inline-block; margin-top:10px; font-size:1.2rem; color:var(--color-primary); background:#e2e8f0; padding:5px 15px; border-radius:5px;">${cupon}</strong>`;
+        }
       }
     })();
   </script>
