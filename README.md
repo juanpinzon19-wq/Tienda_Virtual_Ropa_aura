@@ -4,7 +4,7 @@
 
 **AURA Moda Consciente** es una landing page enfocada en una marca de ropa que busca el equilibrio perfecto entre estilo, bienestar y durabilidad. El proyecto destaca por ofrecer moda cómoda, prendas atemporales y tejidos transpirables que cuidan la piel, utilizando fibras naturales como algodón orgánico GOTS, lino europeo y Tencel Lyocell.
 
- **Live Demo:** proximamente
+ **Live Demo:** https://juanpinzon19-wq.github.io/Tienda_Virtual_Ropa_aura/
 
 ---
 
